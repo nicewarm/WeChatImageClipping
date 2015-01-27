@@ -1,6 +1,6 @@
 # WeChatImageClipping
 
-现在IM  都在仿微信，我也是遇到这种需求之后，写的这个图片剪裁，效果如下：<br/>
+现在IM（包括第三方的环信、融云等）都在仿微信，我也是遇到这种需求之后，写的这个图片剪裁，效果如下：<br/>
 
  ![image] (https://github.com/nicewarm/WeChatImageClipping/blob/master/image/clipping.png)
  
