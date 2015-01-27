@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Wechatimageclipping : nice">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Wechatimageclipping</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nicewarm/WeChatImageClipping">View on GitHub</a>
+
+          <h1 id="project_title">Wechatimageclipping</h1>
+          <h2 id="project_tagline">nice</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/nicewarm/WeChatImageClipping/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/nicewarm/WeChatImageClipping/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="wechatimageclipping" class="anchor" href="#wechatimageclipping" aria-hidden="true"><span class="octicon octicon-link"></span></a>WeChatImageClipping</h1>
+
+<p>现在IM（包括第三方的环信、融云等）都在仿微信，我也是遇到这种需求之后，写的这个图片剪裁，效果如下：<br></p>
+
+<p><img src="https://github.com/nicewarm/WeChatImageClipping/blob/master/image/clipping.png" alt="image"></p>
+
+<p>主要代码如下：<br></p>
+
+<pre><code>    Bitmap roundConcerImage = Bitmap.createBitmap(500,500, Config.ARGB_8888);
+    Canvas canvas = new Canvas(roundConcerImage);
+    Paint paint = new Paint();
+    Rect rect = new Rect(0,0,500,500);
+    Rect rectF = new Rect(0, 0, bitmap_in.getWidth(), bitmap_in.getHeight());
+    paint.setAntiAlias(true);
+    NinePatch patch = new NinePatch(bitmap_bg, bitmap_bg.getNinePatchChunk(), null);
+    patch.draw(canvas, rect);
+    paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+    canvas.drawBitmap(bitmap_in, rectF, rect, paint);
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Wechatimageclipping maintained by <a href="https://github.com/nicewarm">nicewarm</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
